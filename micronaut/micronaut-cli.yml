@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.luafanti
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [graalvm, amazon-api-gateway, annotation-api, app-name, aws-lambda, jackson-databind, java, java-application, junit, logback, maven, readme, shade, x86, yaml]
