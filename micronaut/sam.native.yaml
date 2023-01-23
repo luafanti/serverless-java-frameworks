@@ -1,0 +1,36 @@
+  AWSTemplateFormatVersion: '2010-09-09'
+  Transform: AWS::Serverless-2016-10-31
+  Description: Micronaut Native Serverless
+  Globals:
+    Api:
+      EndpointConfiguration: REGIONAL
+
+  Resources:
+    MicronautLambdaNative:
+      Type: AWS::Serverless::Function
+      Properties:
+        Handler: io.micronaut.function.aws.proxy.MicronautLambdaHandler
+        Runtime: provided.al2
+        CodeUri: target/function.zip
+        Architectures:
+          - arm64
+        MemorySize: 512
+        Timeout: 30
+        Environment:
+          Variables:
+            DISABLE_SIGNAL_HANDLERS: true
+        AutoPublishAlias: live
+        Policies: AWSLambdaBasicExecutionRole
+        Events:
+          ProxyResource:
+            Type: Api
+            Properties:
+              Path: /{proxy+}
+              Method: any
+
+  Outputs:
+    MicronautServerlessNativeApi:
+      Description: App URL
+      Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello'
+      Export:
+        Name: MicronautServerlessNativeApi
