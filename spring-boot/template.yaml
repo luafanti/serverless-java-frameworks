@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
 Description: Spring Boot Serverless
 Globals:
@@ -16,6 +16,8 @@ Resources:
         - x86_64
       MemorySize: 512
       Timeout: 30
+      SnapStart:
+        ApplyOn: PublishedVersions
       Environment:
         Variables:
           JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
@@ -30,7 +32,7 @@ Resources:
 
 Outputs:
   SpringBootServerlessApi:
-    Description: App URL
+    Description: API Gateway Hello endpoint for Spring Boot Lambda
     Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello'
     Export:
       Name: SpringBootServerlessApi
