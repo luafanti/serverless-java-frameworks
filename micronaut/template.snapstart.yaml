@@ -1,23 +1,23 @@
 AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
-Description: Spring Boot Serverless
+Description: Micronaut Serverless
 Globals:
   Api:
     EndpointConfiguration: REGIONAL
 
 Resources:
-  SpringBootLambda:
+  MicronautLambda:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: com.luafanti.StreamLambdaHandler::handleRequest
+      Handler: io.micronaut.function.aws.proxy.MicronautLambdaHandler
       Runtime: java11
-      CodeUri: target/spring-boot-serverless-1.0.0-lambda-package.zip
+      CodeUri: target/micronaut-serverless-1.0.0.jar
       Architectures:
         - x86_64
       MemorySize: 512
       Timeout: 30
       SnapStart:
-        ApplyOn: None
+        ApplyOn: PublishedVersions
       Environment:
         Variables:
           JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
@@ -33,8 +33,8 @@ Resources:
             Method: any
 
 Outputs:
-  SpringBootServerlessApi:
-    Description: API Gateway Hello endpoint for Spring Boot Lambda
+  MicronautServerlessApi:
+    Description: API Gateway Hello endpoint for Micronaut Lambda
     Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello'
     Export:
-      Name: SpringBootServerlessApi
+      Name: MicronautServerlessApi

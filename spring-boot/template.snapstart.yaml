@@ -17,7 +17,7 @@ Resources:
       MemorySize: 512
       Timeout: 30
       SnapStart:
-        ApplyOn: None
+        ApplyOn: PublishedVersions
       Environment:
         Variables:
           JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
