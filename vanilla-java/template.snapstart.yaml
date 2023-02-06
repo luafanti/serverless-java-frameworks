@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Description: Java Serverless
+Globals:
+  Api:
+    EndpointConfiguration: REGIONAL
+
+Resources:
+  JavaLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.luafanti.HelloHandler::handleRequest
+      Runtime: java11
+      CodeUri: target/java-serverless-1.0.0.jar
+      Architectures:
+        - x86_64
+      MemorySize: 128
+      Timeout: 30
+      SnapStart:
+        ApplyOn: PublishedVersions
+      Environment:
+        Variables:
+          JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
+      AutoPublishAlias: live
+      Policies: AWSLambdaBasicExecutionRole
+      EventInvokeConfig:
+        MaximumRetryAttempts: 0
+      Events:
+        ProxyResource:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: get
+
+Outputs:
+  JavaBootServerlessApi:
+    Description: API Gateway Hello endpoint for pure Java Lambda
+    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello'
+    Export:
+      Name: SpringBootServerlessApi

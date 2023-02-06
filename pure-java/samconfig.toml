@@ -1,0 +1,14 @@
+version = 0.1
+[default]
+
+[default.deploy]
+
+[default.deploy.parameters]
+stack_name = "spring-boot-serverless"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-18ed0j5xol14m"
+s3_prefix = "spring-boot-serverless"
+region = "eu-central-1"
+confirm_changeset = false
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []
