@@ -18,7 +18,7 @@ sam deploy -t template.snapstart.yaml
 sam delete
 ```
 
-### Statistic
+### Measurements
 
 **Without SnapStart**
 
@@ -186,5 +186,9 @@ sam delete
 
 **Median (p50)**
 
-<img alt="Micronaut Cold start median - SnapStart comparison" src="../images/micronaut_cold_start_median.png" width="700" height="400">
-<img alt="Micronaut Warm start median - SnapStart comparison" src="../images/micronaut_warm_start_median.png" width="700" height="400">
+<p align="center">
+  <img alt="Micronaut Cold start median - SnapStart comparison" src="../images/micronaut_cold_start_median.png" width="700" height="400">
+</p>
+<p align="center">
+    <img alt="Micronaut Warm start median - SnapStart comparison" src="../images/micronaut_warm_start_median.png" width="700" height="400">
+</p>

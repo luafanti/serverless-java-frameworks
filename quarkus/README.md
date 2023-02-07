@@ -1,4 +1,4 @@
-# Vanilla Java on AWS Lambda
+# Quarkus framework on AWS Lambda
 
 ### Build & install
 
@@ -42,65 +42,66 @@ sam delete
         </tr>        
         <tr>
             <th>128</th>
-            <td>0%</td>
-            <td>754.9</td>
-            <td>790.8</td>
-            <td>826.9</td>
-            <td>904</td>
-            <td>11.3</td>
-            <td>37</td>
-            <td>228.2</td>
-            <td>275.4</td>
+            <td>100%</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
         </tr>
         <tr>
             <th>256</th>
             <td>0%</td>
-            <td>566.6</td>
-            <td>599.9</td>
-            <td>666.9</td>
-            <td>676.1</td>
-            <td>1.9</td>
-            <td>15.4</td>
-            <td>107.1</td>
-            <td>328.2</td>
+            <td>3452.7</td>
+            <td>3543.6</td>
+            <td>3732.7</td>
+            <td>3757.3</td>
+            <td>50.5</td>
+            <td>73.1</td>
+            <td>213.8</td>
+            <td>317.2</td>
         </tr>
         <tr>
             <th>512</th>
             <td>0%</td>
-            <td>549.4</td>
-            <td>474.3</td>
-            <td>502.1</td>
-            <td>529.5</td>
-            <td>1.6</td>
-            <td>8.4</td>
-            <td>50.9</td>
-            <td>97.3</td>
+            <td>2738.2</td>
+            <td>2818.7</td>
+            <td>2890</td>
+            <td>2899.4</td>
+            <td>16.5</td>
+            <td>34</td>
+            <td>93.1</td>
+            <td>189.5</td>
         </tr>
         <tr>
             <th>1024</th>
             <td>0%</td>
-            <td>426.1</td>
-            <td>445.5</td>
-            <td>466.1</td>
-            <td>489.7</td>
-            <td>1.6</td>
-            <td>3.3</td>
-            <td>20.6</td>
-            <td>25.5</td>
+            <td>2305.7</td>
+            <td>2387.7</td>
+            <td>2512.6</td>
+            <td>4079.8</td>
+            <td>5.8</td>
+            <td>11.4</td>
+            <td>14.5</td>
+            <td>70.2</td>
         </tr>
         <tr>
             <th>4096</th>
             <td>0%</td>
-            <td>301.7</td>
-            <td>327.7</td>
-            <td>415.9</td>
-            <td>450.4</td>
-            <td>1.5</td>
-            <td>2.5</td>
-            <td>13.2</td>
-            <td>21.1</td>
+            <td>1676.2</td>
+            <td>1823</td>
+            <td>2028.8</td>
+            <td>2046.3</td>
+            <td>4.4</td>
+            <td>7.7</td>
+            <td>18.4</td>
+            <td>42.6</td>
         </tr>
 </table>
+
 
 **With SnapStart**
 
@@ -124,71 +125,72 @@ sam delete
         </tr>        
         <tr>
             <th>128</th>
-            <td>0%</td>
-            <td>705.3</td>
-            <td>773.3</td>
-            <td>817.8</td>
-            <td>896.2</td>
-            <td>17.4</td>
-            <td>52.6</td>
-            <td>268</td>
-            <td>479.7</td>
+            <td>100%</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
         </tr>
         <tr>
             <th>256</th>
             <td>0%</td>
-            <td>401.6</td>
-            <td>447.9</td>
-            <td>473.2</td>
-            <td>536.6</td>
-            <td>7.7</td>
-            <td>20.3</td>
-            <td>120.2</td>
-            <td>214.3</td>
+            <td>1918.5</td>
+            <td>1977.8</td>
+            <td>2034.1</td>
+            <td>2063.4</td>
+            <td>48.8</td>
+            <td>63.5</td>
+            <td>168.2</td>
+            <td>264.1</td>
         </tr>
         <tr>
             <th>512</th>
             <td>0%</td>
-            <td>231.9</td>
-            <td>261.9</td>
-            <td>311.7</td>
-            <td>1174.6</td>
-            <td>1.7</td>
-            <td>9.7</td>
-            <td>53.5</td>
-            <td>135.6</td>
+            <td>1059.1</td>
+            <td>1115.8</td>
+            <td>1144.8</td>
+            <td>1148.2</td>
+            <td>16</td>
+            <td>33.7</td>
+            <td>94.6</td>
+            <td>172.5</td>
         </tr>
         <tr>
             <th>1024</th>
             <td>0%</td>
-            <td>203.9</td>
-            <td>231.6</td>
-            <td>367.3</td>
-            <td>399.1</td>
-            <td>1.6</td>
-            <td>3.7</td>
-            <td>24.8</td>
-            <td>53.4</td>
+            <td>583.38</td>
+            <td>622</td>
+            <td>690.4</td>
+            <td>711.2</td>
+            <td>5.5</td>
+            <td>13.6</td>
+            <td>37.9</td>
+            <td>64.3</td>
         </tr>
         <tr>
             <th>4096</th>
             <td>0%</td>
-            <td>241.5</td>
-            <td>353.4</td>
-            <td>484.1</td>
-            <td>501.4</td>
-            <td>1.5</td>
-            <td>2.6</td>
-            <td>14</td>
-            <td>25.7</td>
+            <td>455.7</td>
+            <td>498.6</td>
+            <td>556</td>
+            <td>566.1</td>
+            <td>4.3</td>
+            <td>7.4</td>
+            <td>20.2</td>
+            <td>57.2</td>
         </tr>
 </table>
+
 
 **Median (p50)**
 
 <p align="center">
-  <img alt="Java Cold start median - SnapStart comparison" src="../images/java_cold_start_median.png" width="700" height="400">
+  <img alt="Quarkus Cold start median - SnapStart comparison" src="../images/quarkus_cold_start_median.png" width="700" height="400">
 </p>
 <p align="center">
-    <img alt="Java Warm start median - SnapStart comparison" src="../images/java_cold_start_median.png" width="700" height="400">
+    <img alt="Quarkus Warm start median - SnapStart comparison" src="../images/quarkus_warm_start_median.png" width="700" height="400">
 </p>
