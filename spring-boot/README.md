@@ -1,5 +1,7 @@
 # Spring Boot framework on AWS Lambda
 
+Spring Boot is the most widely adopted and well-established of the three frameworks. Pivotal product has also the largest and most active community. It has been around for over a decade. It provides a wide range of features and is highly configurable, making it a good choice for large and complex applications. However, Spring Boot is more resource-intensive than Quarkus and Micronaut. Spring Boot uses a traditional, Just-in-Time (JIT) compilation approach, which can result in longer startup times compared to Quarkus and Micronaut, which use Ahead-of-Time (AOT) compilation. AOT compilation pre-compiles the code at build time, resulting in faster startup times and smaller memory footprint. Also, runtime dependency injection adds some overhead and complexity to spring-based workloads.
+
 ### Build & install
 
 ```bash

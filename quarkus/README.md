@@ -1,5 +1,7 @@
 # Quarkus framework on AWS Lambda
 
+Quarkus is a relatively new framework that aims to provide the same functionality as Spring Boot, but with a smaller footprint and faster startup time. A project initiated by RedHat was created to be used for native compilation for GraalVM. It aims to be effective platform for serverless, cloud, and Kubernetes environments. Quarkus uses Ahead-of-Time (AOT) compilation to reduce startup time and memory usage. The community strongly appreciates the speed and convenience of development. More and more projects boast of migrating microservice workloads from Spring Boot to Quarkus. At the end I can add that the documentation is really good.
+
 ### Build & install
 
 ```bash

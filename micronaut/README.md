@@ -1,4 +1,5 @@
 # Micronaut framework on AWS Lambda
+Micronaut like Quarkus is a relatively newer framework, but it has been gaining popularity in recent years. It has a very spring-inspired programming model. It also uses Reactor (instead of Vert.x that Quarkus use). So if you are coming from a Spring world, in Micronaut you will find many similar patterns, techniques e.g. Mono and Flux from Reactor core. At the same time Micronaut aims to avoid downsides of Spring. It minimizes using reflections and proxies and doesn't use runtime bytecode generation. The source I found says that performance is a tiny bit better with Quarkus, but it's just negligible value.
 
 ### Build & install
 
