@@ -20,6 +20,12 @@ sam deploy -t template.snapstart.yaml
 sam delete
 ```
 
+### Load test
+
+```bash
+./load-test.sh
+```
+
 ### Measurements
 
 **Without SnapStart**
@@ -196,4 +202,4 @@ sam delete
 </p>
 
 
-* Missing data for Warm start with 256 Mb is because the read was with a large anomaly that spoil chart presentation.
+* Missing data for Warm start with 256 MB is because the read was with a large anomaly that spoils chart presentation.

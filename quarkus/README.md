@@ -20,6 +20,13 @@ sam deploy -t template.snapstart.yaml
 sam delete
 ```
 
+### Load test
+
+```bash
+./load-test.sh
+```
+
+
 ### Measurements
 
 **Without SnapStart**

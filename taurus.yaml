@@ -1,0 +1,12 @@
+---
+execution:
+  - concurrency: 100
+    iterations: 10
+    scenario: hello
+    locations:
+      eu-central-1: 1
+
+scenarios:
+  hello:
+    requests:
+
